@@ -2,30 +2,54 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
   "labels": ["dependencies"],
-  "schedule": ["before 9am on monday"],
+  "minimumReleaseAge": "24 hours",
+  "schedule": ["* * * * *"],
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 9am on monday"]
+    "schedule": ["* * * * *"]
   },
   "packageRules": [
     {
-      "description": "Group all non-major Docker image bumps (Dockerfiles + compose) into one PR",
-      "matchManagers": ["dockerfile", "docker-compose"],
-      "matchUpdateTypes": ["minor", "patch", "digest"],
-      "groupName": "docker images (non-major)"
-    },
-    {
-      "description": "Keep major Docker bumps separate so they get reviewed individually",
-      "matchManagers": ["dockerfile", "docker-compose"],
-      "matchUpdateTypes": ["major"],
-      "addLabels": ["docker", "major"]
-    },
-    {
-      "description": "Group non-major pnpm devDependency bumps across the workspace",
+      "description": "Group Next.js and React runtime bumps together",
       "matchManagers": ["npm"],
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "pnpm dev dependencies"
+      "matchPackageNames": ["next", "react", "react-dom"],
+      "groupName": "frontend framework"
+    },
+    {
+      "description": "Group TypeScript compiler and type definition bumps together",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["typescript", "/^@types\\//"],
+      "groupName": "typescript ecosystem"
+    },
+    {
+      "description": "Group build, lint, and formatting tool bumps together",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["oxfmt", "oxlint", "turbo", "unplugin-dts", "vite"],
+      "groupName": "build and lint tooling"
+    },
+    {
+      "description": "Group runtime library bumps together",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "excludePackageNames": ["next", "react", "react-dom"],
+      "groupName": "runtime libraries"
+    },
+    {
+      "description": "Group app and edge proxy image bumps together",
+      "matchManagers": ["dockerfile", "docker-compose"],
+      "matchPackageNames": ["caddy"],
+      "groupName": "docker web infrastructure"
+    },
+    {
+      "description": "Group backing service image bumps together",
+      "matchManagers": ["docker-compose"],
+      "matchPackageNames": [
+        "chrislusf/seaweedfs",
+        "clickhouse/clickhouse-server",
+        "postgres",
+        "rabbitmq"
+      ],
+      "groupName": "docker backing services"
     },
     {
       "description": "Group mise tool versions (node + pnpm)",
