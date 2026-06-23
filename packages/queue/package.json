@@ -20,7 +20,7 @@
     "lint": "oxlint -c oxlint.config.ts"
   },
   "dependencies": {
-    "amqplib": "0.10.9"
+    "amqplib": "2.0.1"
   },
   "devDependencies": {
     "@relog/config": "workspace:*",
