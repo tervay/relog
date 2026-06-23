@@ -14,7 +14,7 @@
       "dependsOn": ["^build"]
     },
     "dashboard#typecheck": {
-      "dependsOn": ["^build", "build"]
+      "dependsOn": ["^build"]
     }
   }
 }

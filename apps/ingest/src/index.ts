@@ -1,15 +1,18 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
-// Imported but intentionally unused — wired up later.
-import * as db from "@relog/db";
 import * as queue from "@relog/queue";
+import { apiKeyAuth } from "./middleware/auth.js";
 
-void db;
 void queue;
 
 const app = new Hono();
 
 app.get("/health", (c) => c.json({ status: "ok" }));
+
+const protected_ = new Hono<{ Variables: { projectId: string } }>();
+protected_.use(apiKeyAuth);
+
+app.route("/", protected_);
 
 const port = Number(process.env["PORT"] ?? process.env["INGEST_PORT"] ?? 3001);
 

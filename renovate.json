@@ -3,10 +3,10 @@
   "extends": ["config:recommended"],
   "labels": ["dependencies"],
   "minimumReleaseAge": "72 hours",
-  "schedule": ["0 * * * *"],
+  "schedule": ["every hour"],
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["0 * * * *"]
+    "schedule": ["every hour"]
   },
   "packageRules": [
     {
