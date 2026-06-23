@@ -1,0 +1,27 @@
+{
+  "name": "@relog/sdk",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint -c oxlint.config.ts"
+  },
+  "devDependencies": {
+    "@relog/config": "workspace:*",
+    "unplugin-dts": "1.0.2",
+    "vite": "8.0.16",
+    "typescript": "5.9.3"
+  }
+}

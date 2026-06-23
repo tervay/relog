@@ -1,0 +1,21 @@
+# Dependencies are installed inside the image; never copy host-built ones,
+# their binaries/symlinks are built for the host and clobber the container's.
+node_modules
+**/node_modules
+
+# Build artifacts and caches
+dist
+**/dist
+.next
+**/.next
+.turbo
+**/.turbo
+
+# Local env and VCS
+.env
+.git
+.gitignore
+
+# Editor / misc
+.DS_Store
+*.log

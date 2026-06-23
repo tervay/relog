@@ -1,0 +1,26 @@
+{
+  "name": "ingest",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint -c oxlint.config.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "1.19.14",
+    "@relog/db": "workspace:*",
+    "@relog/queue": "workspace:*",
+    "hono": "4.12.26"
+  },
+  "devDependencies": {
+    "@relog/config": "workspace:*",
+    "@types/node": "20.19.43",
+    "tsx": "4.22.4",
+    "typescript": "5.9.3",
+    "vite": "8.0.16"
+  }
+}

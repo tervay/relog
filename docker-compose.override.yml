@@ -1,0 +1,30 @@
+services:
+  postgres:
+    ports:
+      - "5432:5432"
+
+  clickhouse:
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+
+  rabbitmq:
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  seaweedfs:
+    ports:
+      - "8333:8333"
+
+  ingest:
+    volumes:
+      - ./apps/ingest/src:/app/apps/ingest/src
+
+  worker:
+    volumes:
+      - ./apps/worker/src:/app/apps/worker/src
+
+  dashboard:
+    volumes:
+      - ./apps/dashboard/app:/app/apps/dashboard/app

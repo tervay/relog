@@ -1,0 +1,33 @@
+{
+  "name": "@relog/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint -c oxlint.config.ts"
+  },
+  "dependencies": {
+    "@clickhouse/client": "1.21.0",
+    "postgres": "3.4.9"
+  },
+  "devDependencies": {
+    "@relog/config": "workspace:*",
+    "@types/node": "20.19.43",
+    "unplugin-dts": "1.0.2",
+    "vite": "8.0.16",
+    "typescript": "5.9.3"
+  }
+}

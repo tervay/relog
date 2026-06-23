@@ -1,0 +1,19 @@
+{
+  "name": "@relog/config",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "typescript",
+    "oxlint",
+    "oxfmt"
+  ],
+  "type": "module",
+  "exports": {
+    "./typescript/tsconfig.json": "./typescript/tsconfig.json",
+    "./typescript/node.json": "./typescript/node.json",
+    "./typescript/nextjs.json": "./typescript/nextjs.json",
+    "./oxlint/base.ts": "./oxlint/base.ts",
+    "./oxlint/nextjs.ts": "./oxlint/nextjs.ts",
+    "./oxfmt/config.ts": "./oxfmt/config.ts"
+  }
+}

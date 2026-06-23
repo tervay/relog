@@ -1,0 +1,13 @@
+:80 {
+    handle /api/ingest/* {
+        uri strip_prefix /api/ingest
+        reverse_proxy ingest:3001
+    }
+    handle /api/ingest {
+        uri strip_prefix /api/ingest
+        reverse_proxy ingest:3001
+    }
+    handle {
+        reverse_proxy dashboard:3000
+    }
+}
