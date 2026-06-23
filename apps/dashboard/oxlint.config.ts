@@ -1,4 +1,7 @@
 import { defineConfig } from "oxlint";
 import nextjs from "@relog/config/oxlint/nextjs.ts";
 
-export default defineConfig({ extends: [nextjs] });
+export default defineConfig({
+  extends: [nextjs],
+  ignorePatterns: ["next-env.d.ts"],
+});

@@ -15,17 +15,23 @@
   },
   "scripts": {
     "build": "vite build",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
     "dev": "vite build --watch",
     "typecheck": "tsc --noEmit",
     "lint": "oxlint -c oxlint.config.ts"
   },
   "dependencies": {
     "@clickhouse/client": "1.22.0",
+    "drizzle-orm": "0.44.2",
+    "nanoid": "5.1.5",
     "postgres": "3.4.9"
   },
   "devDependencies": {
     "@relog/config": "workspace:*",
     "@types/node": "24.13.2",
+    "dotenv": "16.5.0",
+    "drizzle-kit": "0.31.1",
     "typescript": "6.0.3",
     "unplugin-dts": "1.0.2",
     "vite": "8.0.16"

@@ -12,5 +12,8 @@ out/
 # Environment
 .env
 
+# TypeScript
+*.tsbuildinfo
+
 # Logs
 *.log

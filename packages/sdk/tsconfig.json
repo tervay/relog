@@ -2,7 +2,8 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@relog/config/typescript/tsconfig.json",
   "compilerOptions": {
-    "noEmit": false
+    "noEmit": false,
+    "lib": ["ESNext", "DOM"]
   },
   "include": ["src"]
 }
