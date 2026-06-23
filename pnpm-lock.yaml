@@ -107,8 +107,8 @@ importers:
   packages/db:
     dependencies:
       '@clickhouse/client':
-        specifier: 1.21.0
-        version: 1.21.0
+        specifier: 1.22.0
+        version: 1.22.0
       postgres:
         specifier: 3.4.9
         version: 3.4.9
@@ -171,11 +171,11 @@ importers:
 
 packages:
 
-  '@clickhouse/client-common@1.21.0':
-    resolution: {integrity: sha512-UjvA32aaLKbQ5U735qAGdzohrOrfU8zFoOWIOWorWQk+7UzHZxq6pf4Uh/wQ08zAMb9cmkd9h9N1FV8zP8UCOg==}
+  '@clickhouse/client-common@1.22.0':
+    resolution: {integrity: sha512-MQgXRhoYXut6GhRrTJlub42bnPX7+5Vm+5gHNR0zZXU5+EwZKsBgMXiWXPOerAmQd3weGKm8hzoeZJCfU3Cw2w==}
 
-  '@clickhouse/client@1.21.0':
-    resolution: {integrity: sha512-HJLHX60clPFV4ZYjhd9Radgfqkl0MX6T4GDaS6CK4K2cpMWW4uIDPzXjueIVJh+LRVt1pi7kJKn8BWjmbGAlEA==}
+  '@clickhouse/client@1.22.0':
+    resolution: {integrity: sha512-iQAAM4VT9fO7mYVOkGB/Ul9Xxuf0atKn+GFceZqfE8xFakV8KOAQxR3tfNrXFMlJ8T+Q3gbrpfLFyj7/TbOwyA==}
     engines: {node: '>=16'}
 
   '@emnapi/core@1.10.0':
@@ -1265,11 +1265,11 @@ packages:
 
 snapshots:
 
-  '@clickhouse/client-common@1.21.0': {}
+  '@clickhouse/client-common@1.22.0': {}
 
-  '@clickhouse/client@1.21.0':
+  '@clickhouse/client@1.22.0':
     dependencies:
-      '@clickhouse/client-common': 1.21.0
+      '@clickhouse/client-common': 1.22.0
 
   '@emnapi/core@1.10.0':
     dependencies:

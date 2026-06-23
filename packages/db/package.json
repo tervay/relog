@@ -20,7 +20,7 @@
     "lint": "oxlint -c oxlint.config.ts"
   },
   "dependencies": {
-    "@clickhouse/client": "1.21.0",
+    "@clickhouse/client": "1.22.0",
     "postgres": "3.4.9"
   },
   "devDependencies": {
