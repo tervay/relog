@@ -1,0 +1,23 @@
+name: Services
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  infra:
+    name: Infra services start healthy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Start infra services
+        run: |
+          touch .env
+          docker compose up -d --wait postgres clickhouse rabbitmq seaweedfs
+
+      - name: Teardown
+        if: always()
+        run: docker compose down -v
