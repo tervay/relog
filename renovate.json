@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
   "labels": ["dependencies"],
-  "minimumReleaseAge": "24 hours",
+  "minimumReleaseAge": "72 hours",
   "schedule": ["* * * * *"],
   "lockFileMaintenance": {
     "enabled": true,
