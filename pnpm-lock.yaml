@@ -18,8 +18,8 @@ importers:
         specifier: 2.9.18
         version: 2.9.18
       typescript:
-        specifier: 5.9.3
-        version: 5.9.3
+        specifier: 6.0.3
+        version: 6.0.3
 
   apps/dashboard:
     dependencies:
@@ -46,8 +46,8 @@ importers:
         specifier: 18.3.7
         version: 18.3.7(@types/react@18.3.31)
       typescript:
-        specifier: 5.9.3
-        version: 5.9.3
+        specifier: 6.0.3
+        version: 6.0.3
 
   apps/ingest:
     dependencies:
@@ -74,8 +74,8 @@ importers:
         specifier: 4.22.4
         version: 4.22.4
       typescript:
-        specifier: 5.9.3
-        version: 5.9.3
+        specifier: 6.0.3
+        version: 6.0.3
       vite:
         specifier: 8.0.16
         version: 8.0.16(@types/node@20.19.43)(esbuild@0.28.1)(tsx@4.22.4)
@@ -96,8 +96,8 @@ importers:
         specifier: 4.22.4
         version: 4.22.4
       typescript:
-        specifier: 5.9.3
-        version: 5.9.3
+        specifier: 6.0.3
+        version: 6.0.3
       vite:
         specifier: 8.0.16
         version: 8.0.16(@types/node@20.19.43)(esbuild@0.28.1)(tsx@4.22.4)
@@ -120,11 +120,11 @@ importers:
         specifier: 20.19.43
         version: 20.19.43
       typescript:
-        specifier: 5.9.3
-        version: 5.9.3
+        specifier: 6.0.3
+        version: 6.0.3
       unplugin-dts:
         specifier: 1.0.2
-        version: 1.0.2(esbuild@0.28.1)(rolldown@1.0.3)(typescript@5.9.3)(vite@8.0.16(@types/node@20.19.43)(esbuild@0.28.1)(tsx@4.22.4))
+        version: 1.0.2(esbuild@0.28.1)(rolldown@1.0.3)(typescript@6.0.3)(vite@8.0.16(@types/node@20.19.43)(esbuild@0.28.1)(tsx@4.22.4))
       vite:
         specifier: 8.0.16
         version: 8.0.16(@types/node@20.19.43)(esbuild@0.28.1)(tsx@4.22.4)
@@ -145,11 +145,11 @@ importers:
         specifier: 20.19.43
         version: 20.19.43
       typescript:
-        specifier: 5.9.3
-        version: 5.9.3
+        specifier: 6.0.3
+        version: 6.0.3
       unplugin-dts:
         specifier: 1.0.2
-        version: 1.0.2(esbuild@0.28.1)(rolldown@1.0.3)(typescript@5.9.3)(vite@8.0.16(@types/node@20.19.43)(esbuild@0.28.1)(tsx@4.22.4))
+        version: 1.0.2(esbuild@0.28.1)(rolldown@1.0.3)(typescript@6.0.3)(vite@8.0.16(@types/node@20.19.43)(esbuild@0.28.1)(tsx@4.22.4))
       vite:
         specifier: 8.0.16
         version: 8.0.16(@types/node@20.19.43)(esbuild@0.28.1)(tsx@4.22.4)
@@ -160,11 +160,11 @@ importers:
         specifier: workspace:*
         version: link:../config
       typescript:
-        specifier: 5.9.3
-        version: 5.9.3
+        specifier: 6.0.3
+        version: 6.0.3
       unplugin-dts:
         specifier: 1.0.2
-        version: 1.0.2(esbuild@0.28.1)(rolldown@1.0.3)(typescript@5.9.3)(vite@8.0.16(@types/node@20.19.43)(esbuild@0.28.1)(tsx@4.22.4))
+        version: 1.0.2(esbuild@0.28.1)(rolldown@1.0.3)(typescript@6.0.3)(vite@8.0.16(@types/node@20.19.43)(esbuild@0.28.1)(tsx@4.22.4))
       vite:
         specifier: 8.0.16
         version: 8.0.16(@types/node@20.19.43)(esbuild@0.28.1)(tsx@4.22.4)
@@ -1318,8 +1318,8 @@ packages:
     resolution: {integrity: sha512-bwabv6PupzeavybzEoArBAkwq5fnzwf8OFnRtpHwnviFWuwJPFxtyH+aVp36TmIqK3aYYgtTJ3J0m2ysxxSzQg==}
     hasBin: true
 
-  typescript@5.9.3:
-    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2251,13 +2251,13 @@ snapshots:
       '@turbo/windows-64': 2.9.18
       '@turbo/windows-arm64': 2.9.18
 
-  typescript@5.9.3: {}
+  typescript@6.0.3: {}
 
   ufo@1.6.4: {}
 
   undici-types@6.21.0: {}
 
-  unplugin-dts@1.0.2(esbuild@0.28.1)(rolldown@1.0.3)(typescript@5.9.3)(vite@8.0.16(@types/node@20.19.43)(esbuild@0.28.1)(tsx@4.22.4)):
+  unplugin-dts@1.0.2(esbuild@0.28.1)(rolldown@1.0.3)(typescript@6.0.3)(vite@8.0.16(@types/node@20.19.43)(esbuild@0.28.1)(tsx@4.22.4)):
     dependencies:
       '@rollup/pluginutils': 5.4.0
       '@volar/typescript': 2.4.28
@@ -2266,7 +2266,7 @@ snapshots:
       kolorist: 1.8.0
       local-pkg: 1.2.1
       magic-string: 0.30.21
-      typescript: 5.9.3
+      typescript: 6.0.3
       unplugin: 2.3.11
     optionalDependencies:
       esbuild: 0.28.1
