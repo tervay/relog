@@ -11,7 +11,7 @@
     "lint": "oxlint -c oxlint.config.ts"
   },
   "dependencies": {
-    "@hono/node-server": "1.19.14",
+    "@hono/node-server": "2.0.6",
     "@relog/db": "workspace:*",
     "@relog/queue": "workspace:*",
     "hono": "4.12.26"
