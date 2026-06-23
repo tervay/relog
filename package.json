@@ -12,8 +12,8 @@
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {
-    "oxfmt": "0.55.0",
-    "oxlint": "1.70.0",
+    "oxfmt": "0.56.0",
+    "oxlint": "1.71.0",
     "turbo": "2.9.18",
     "typescript": "6.0.3"
   },
