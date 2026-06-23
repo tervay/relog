@@ -7,9 +7,43 @@ on:
     branches: [main]
 
 jobs:
-  ci:
-    name: CI
+  format:
+    name: Format check
     runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: jdx/mise-action@v2
+
+      - name: Get pnpm store path
+        id: pnpm-store
+        run: echo "path=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v5
+        with:
+          path: ${{ steps.pnpm-store.outputs.path }}
+          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: pnpm-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Format check
+        run: pnpm format:check
+
+  ci:
+    name: ${{ matrix.workspace }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        workspace:
+          - dashboard
+          - ingest
+          - worker
+          - "@relog/db"
+          - "@relog/queue"
+          - "@relog/sdk"
 
     steps:
       - uses: actions/checkout@v7
@@ -29,20 +63,17 @@ jobs:
       - uses: actions/cache@v5
         with:
           path: .turbo
-          key: turbo-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ hashFiles('turbo.json') }}
-          restore-keys: turbo-${{ runner.os }}-
+          key: turbo-${{ runner.os }}-${{ matrix.workspace }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ hashFiles('turbo.json') }}
+          restore-keys: turbo-${{ runner.os }}-${{ matrix.workspace }}-
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Format check
-        run: pnpm format:check
-
       - name: Lint
-        run: pnpm lint
+        run: pnpm turbo lint --filter=${{ matrix.workspace }}
 
       - name: Typecheck
-        run: pnpm typecheck
+        run: pnpm turbo typecheck --filter=${{ matrix.workspace }}
 
       - name: Build
-        run: pnpm build
+        run: pnpm turbo build --filter=${{ matrix.workspace }}
